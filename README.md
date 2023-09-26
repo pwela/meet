@@ -2,6 +2,10 @@
 
 This is a serverless progressive web application (PWA) built with React and using a test drivent developemnt technique (TDD).
 
+# Use of serverless function:
+
+The serverless function will be used to obtain the access token form the authorization server using a consumer key and consumer secret. When the user grants consent (after logging in his google account in our case), the OAuth server with generate an authorization code. That code will then be used by the serverless function to request an Access token to the OAuth server. The token will then be used for all user requests by the serverless function when contacting the Protected API to access API protected resources.
+
 # technologies used
 
 - create-react-app (CRA)
