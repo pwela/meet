@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import App from "../App";
 
 const CitySearch = ({ allLocations, setCurrentCity }) => {
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -45,7 +44,7 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
               </li>
             );
           })}
-          <li key="See all cities">
+          <li onClick={handleItemClicked} key="See all cities">
             <b>See all cities</b>
           </li>
         </ul>

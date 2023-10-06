@@ -10,9 +10,9 @@ const Event = ({ event }) => {
     }
   };
   return (
-    <li>
+    <li className="event">
       <h3>{event ? event.summary : null}</h3>
-      <p>{event ? event.created : null}</p>
+      <p>{event ? Date(event.created) : null}</p>
       <p>{event ? event.location : null}</p>
       {showDetails ? (
         <div role="region" className="details_section">
@@ -23,10 +23,14 @@ const Event = ({ event }) => {
               <p>{event.description}</p>
             </>
           ) : null}
-          <button onClick={toggleDetails}>Hide details</button>
+          <button className="details-btn" onClick={toggleDetails}>
+            Hide details
+          </button>
         </div>
       ) : (
-        <button onClick={toggleDetails}>Show details</button>
+        <button className="details-btn" onClick={toggleDetails}>
+          Show details
+        </button>
       )}
     </li>
   );

@@ -5,7 +5,9 @@ import NumberOfEvents from "../components/NumberOfEvents";
 describe("<NumberOf Events /> component", () => {
   let NumberOfEventsComponent;
   beforeEach(() => {
-    NumberOfEventsComponent = render(<NumberOfEvents />);
+    NumberOfEventsComponent = render(
+      <NumberOfEvents setCurrentNOE={() => {}} />
+    );
   });
   test("render an element with role textbox and sets the defaulf value to 32", () => {
     const NumberOfEventsTextbox =
