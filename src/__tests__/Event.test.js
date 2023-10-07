@@ -19,7 +19,7 @@ describe("<Event /> component", () => {
       EventComponent.queryByText(allEvents[0].summary)
     ).toBeInTheDocument();
     expect(
-      EventComponent.queryByText(allEvents[0].created)
+      EventComponent.queryByText(Date(allEvents[0].created))
     ).toBeInTheDocument();
     expect(
       EventComponent.queryByText(allEvents[0].location)
