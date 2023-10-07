@@ -8,6 +8,7 @@ const MESSAGES_TO_IGNORE = [
   "When testing, code that causes React state updates should be wrapped into act(...):",
   "Error:",
   "The above error occurred",
+  "Decide between using a controlled or uncontrolled input element and remove one of these props. More info: https://reactjs.org/link/controlled-components",
 ];
 
 const originalError = console.error.bind(console.error);
