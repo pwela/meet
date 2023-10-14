@@ -35,7 +35,7 @@ function App() {
       infoText = "Application offline: limited access";
     }
     setWarningAlert(infoText);
-  }, [currentCity, currentNOE, warningAlert]);
+  }, [currentCity, currentNOE]);
   return (
     <div className="App">
       <div className="alerts-container">
