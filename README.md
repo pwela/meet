@@ -1,6 +1,6 @@
 # meet_app
 
-This is a serverless progressive web application (PWA) built with React and using a test drivent developemnt technique (TDD).
+This is a serverless progressive web application (PWA) built with React and using a test driven developemnt technique (TDD).
 
 # Use of serverless function:
 

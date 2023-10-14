@@ -2,7 +2,7 @@ import { loadFeature, defineFeature } from "jest-cucumber";
 import { render, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import App from "../App";
-import { getEvents } from "../api";
+//import { getEvents } from "../api";
 
 const feature = loadFeature("./src/features/specifyNumberofEvents.feature");
 defineFeature(feature, (test) => {
@@ -13,7 +13,7 @@ defineFeature(feature, (test) => {
   }) => {
     let AppComponent;
     let AppDOM;
-    let EventListItems;
+    //let EventListItems;
     let EventListDOM;
 
     given("a list of upcoming events is displayed;", () => {
@@ -43,8 +43,8 @@ defineFeature(feature, (test) => {
   }) => {
     let AppComponent;
     let AppDOM;
-    let EventListItems;
-    let EventListDOM;
+    //let EventListItems;
+    //let EventListDOM;
     given("a list of upcoming events is displayed;", () => {
       AppComponent = render(<App />);
       AppDOM = AppComponent.container.firstChild;

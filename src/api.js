@@ -1,5 +1,5 @@
+import NProgress from "nprogress";
 import { mockData } from "./mock-data";
-import { NProgress } from "nprogress";
 export const extractLocations = (events) => {
   const extractedLocations = events.map((event) => event.location);
   const locations = [...new Set(extractedLocations)];
@@ -30,6 +30,7 @@ const removeQuery = () => {
 };
 
 export const getEvents = async () => {
+  NProgress.configure({ easing: "ease", speed: 500 });
   NProgress.start();
   if (window.location.href.startsWith("http://localhost")) {
     NProgress.done();
