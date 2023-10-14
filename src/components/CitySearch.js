@@ -33,6 +33,7 @@ const CitySearch = ({ allLocations, setCurrentCity, setInfoAlert }) => {
   };
   useEffect(() => {
     setSuggestions(allLocations);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [`${allLocations}`]);
   return (
     <div id="city-search">

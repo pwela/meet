@@ -7,7 +7,7 @@ const NumberOfEvents = ({ currentNOE, setCurrentNOE, setErrorAlert }) => {
     const value = event.target.value;
     let infoText;
     if (value <= 0 || value > 250 || isNaN(value)) {
-      infoText = "You typed an incorrect value";
+      infoText = "Please type a number between 1 and 250";
     } else {
       infoText = "";
     }
