@@ -37,6 +37,7 @@ function App() {
       infoText = "Application offline: limited access";
     }
     setWarningAlert(infoText);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentCity, currentNOE]);
   return (
     <div className="App">

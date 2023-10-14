@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from "recharts";
+import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 
 const EventGenresChart = ({ events }) => {
   // displays percentage in pie chart
@@ -27,9 +27,14 @@ const EventGenresChart = ({ events }) => {
       </text>
     ) : null;
   };
+  // colors for pie chart
+
+  const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
+
   const [data, setData] = useState([]);
   useEffect(() => {
     setData(getData());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [`${events}`]);
   const genres = ["React", "JavaScript", "Node", "jQuery", "Angular"];
 
@@ -53,7 +58,11 @@ const EventGenresChart = ({ events }) => {
           labelLine={false}
           label={renderCustomizedLabel}
           outerRadius={130}
-        />
+        >
+          {data.map((entry, index) => (
+            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+          ))}
+        </Pie>
       </PieChart>
     </ResponsiveContainer>
   );
