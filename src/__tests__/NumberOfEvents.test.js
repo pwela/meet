@@ -6,20 +6,20 @@ describe("<NumberOf Events /> component", () => {
   let NumberOfEventsComponent;
   beforeEach(() => {
     NumberOfEventsComponent = render(
-      <NumberOfEvents setCurrentNOE={() => {}} />
+      <NumberOfEvents setCurrentNOE={() => {}} setErrorAlert={() => {}} />
     );
   });
   test("render an element with role textbox and sets the defaulf value to 32", () => {
     const NumberOfEventsTextbox =
-      NumberOfEventsComponent.queryByRole("textbox");
+      NumberOfEventsComponent.queryByRole("spinbutton");
     expect(NumberOfEventsTextbox).toBeInTheDocument();
-    expect(NumberOfEventsTextbox).toHaveValue("32");
+    expect(NumberOfEventsTextbox).toHaveValue(32);
   });
   test("Ensure NumberofEvent textbox component is updated when user types", async () => {
     const user = userEvent.setup();
     const NumberOfEventsTextbox =
-      NumberOfEventsComponent.queryByRole("textbox");
+      NumberOfEventsComponent.queryByRole("spinbutton");
     await user.type(NumberOfEventsTextbox, "{backspace}{backspace}10");
-    expect(NumberOfEventsTextbox).toHaveValue("10");
+    expect(NumberOfEventsTextbox).toHaveValue(10);
   });
 });

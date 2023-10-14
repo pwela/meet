@@ -61,7 +61,7 @@ describe("<App /> component Integration", () => {
     const AppDOM = AppComponent.container.firstChild;
     const NumberOfEventsDOM = AppDOM.querySelector("#number-of-events");
     const NumberOfEventsTextbox =
-      within(NumberOfEventsDOM).queryByRole("textbox");
+      within(NumberOfEventsDOM).queryByRole("spinbutton");
 
     await user.type(NumberOfEventsTextbox, "{backspace}{backspace}10");
 
